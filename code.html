@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: By Angelus Taylor</title>
+    <title>Project Palindrome: By Angelus Taylor</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img class="d-inline-block align-text-top" src="img/ms-icon-310x310.png"
-                    alt="A T D Icon"> APP NAME</a>
+                    alt="A T D Icon"> Palindrome</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,20 +64,81 @@
     <!-- Main Body Section -->
     <main class="flex-shrink-0">
         <div class="container py-5 pt-5 mt-5">
-            <h2 class="tittle border-1 border-bottom border-dark">The Code for APP NAME</h2>
+            <h2 class="tittle border-1 border-bottom border-dark">The Code for Project Palindrome</h2>
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
-                        //Call Hello World
-                        function helloWorld() {
-                            alert("Hello World");
+                        // Pseudo code
+                        // --------------------------------------------------
+                        // 1. Get the user input from the string they provide.
+                        // 2. Loop through the string
+                        // 3. make sure that only strings can be used and remove any space from the inpt 
+                        // 4. If the string is a Palindrome then print a congrats message to the sceen. 
+                        // 5. Else print a fail message Palindrome to the screen
+                        // --------------------------------------------------
+
+                        // Get the user input from the string they provide.
+                        // controller function 
+                        function getValue() {
+
+                            // Geting the user input from the string they provide.
+                            let userString = document.getElementById('user-string').value;
+
+                            // Get the value of the user's revirsed string
+                            let palindromeString = checkPalindrone(userString);
+
+                            // Display to the screen. 
+                            displayMessage(palindromeString);
                         }
+
+                        function checkPalindrone(userString) {
+
+                            // Clean up all of the spaces and special characters in the user input. 
+                            let cleanRev = userString.replace(/\s/g, "");
+                            // Reverse the user input
+                            let reversed = cleanRev.split("").reverse().join("");
+                            // Empty string to save the output message 
+                            let palindromeString = "";
+
+                            // The conditional statement to test the user input  
+                            if (userString == reversed) {
+                                palindromeString = `Yay you did it, Your word: ${reversed} is a Palindrome`;
+                            } else {
+                                palindromeString = `Aww sorry your word: ${cleanRev} is not a Palindrome`;
+                            }
+                            // return the output message
+                            return palindromeString;
+                        }
+
+                        // Display the string in the alert on the page
+                        // View function 
+                        function displayMessage(palindromeString, revString) {
+
+                            // Get the string message element 
+                            const stringMessage = document.getElementById('resultString');
+
+                            // Write to the page 
+                            stringMessage.innerText = palindromeString;
+
+                            // Make the String Message area visable
+                            stringResults.classList.remove('invisible');
+                        }
+
+                        // Sellect the the Palindrome? bution and run the program. 
+                        const submitBtn = document.getElementById('btn-submit');
+
+                        // on lcick the Palindrome? button will run he program
+                        submitBtn.addEventListener('click', function () {
+                            getValue();
+                        })
                     </code></pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is struched in one functione</p>
-                    <h5>Hello World Presented using <span><a target="_blank" href="https://prismjs.com/index.html">Prism.js</a></span></h5>
-                    <p>Hello World is a alert with a message of hello world</p>
+                    <p>The code is struched in 3 functione and one control statment</p>
+                    <h5>Project Palindrome Presented using <span><a target="_blank" href="https://prismjs.com/index.html">Prism.js</a></span></h5>
+                    <p class="lead">The goal of this project is to input a string and use a function to check if it is a palindrome.
+                        A palindrome is a word or phrase that reads the same backward and forward. When palindromes are the length of a sentence, they ignore capitalization, punctuation, and word boundaries. 
+                    </p>
                 </div>
             </div>
         </div>

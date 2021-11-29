@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: By Angelus Taylor</title>
+    <title>Project Palindrome: By Angelus Taylor</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img class="d-inline-block align-text-top" src="img/ms-icon-310x310.png"
-                    alt="A T D Icon"> APP NAME</a>
+                    alt="A T D Icon"> Palindrome</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,48 @@
 
     <!-- Main Body Section -->
     <main class="flex-shrink-0">
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 border-end border-2">
+                    <h1>Project Palindrome: A coding project</h1>
+                    <h4 class="lead">
+                        The goal of this project is to input a string and use a function to check if it is a palindrome.
+                        A palindrome is a word or phrase that reads the same backward and forward. When palindromes are the length of a sentence, they ignore capitalization, punctuation, and word boundaries.
+                    </h4>
+                    <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                    <p>1. Enter a String.</p>
+                    <p>2. Press the Palindrome? button.</p>
+                    <h6>3.IF:</h6>
+                    <p>The string is a Palindrome it will be printed and the will be prompt that the string is a Palindrome</p>
+                    <h6>4.Else:</h6>
+                    <p>If the string is not a Palindrome you will be prompted that its not a Palindrome</p>
+                </div>
+                <div class="col col-lg-8">
+                    <div>
+                        <h1>Is it a Palindrome?</h1>
+                        <form>
+                            <div class="row gy-2 gx-3">
+                                <div class="col">
+                                    <label for="user-string">Input a Word</label>
+                                    <input id="user-string" type="text" class="form-control" placeholder="Word">
+                                </div>
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button id="btn-submit" class="btn btn-outline-dark btn-lg px-4 me-md-2" type="button">Palindrome?</button>
+                                </div>
+                            </div>
+                        </form>
 
+                        <div class="alert mt-5 invisible fade show" id="stringResults" role="alert">
+                            <h2 class="mt-5 boder-bottom border-2">Results</h2>
+                            <hr>
+                            <h3 class="mb-0" id="resultString">
+                                <!-- results string -->
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
