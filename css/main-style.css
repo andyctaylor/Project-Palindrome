@@ -6,11 +6,7 @@
     --white-color: #f8f7f1;
 }
 
-* font styling */
-body {
-    background-color: rgb(27, 27, 27);
-}
-
+/* font styling */
 h1,
 h2,
 h3 {
@@ -20,7 +16,7 @@ h3 {
 
 h1,
 .app-name {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 h4 {
@@ -98,7 +94,7 @@ body {
 /* Container styling */
 main>.container {
     padding: 60px 15px 0;
-    margin-bottom: 5rem;
+    margin-bottom: 5px;
 }
 
 /* Main Body Styling */
